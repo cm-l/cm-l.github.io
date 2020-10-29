@@ -1,0 +1,79 @@
+#id01 {
+  color: #b80600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 62px;
+  font-weight: 300;
+  line-height: 59px;
+  margin: 0 0 16px;
+}
+
+#id02 {
+  color: #015dad;
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 45px;
+  margin: 0 0 14px;
+}
+
+#txtName,
+#txtOutput,
+#txtOutputFrancais,
+#wpisz {
+  color: #222;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 14px;
+}
+
+#txtP {
+  color: rgb(59, 56, 56);
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 14px;
+}
+
+#txt .container {
+  height: 200px;
+  position: absolute;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bigger {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.input[type="text"],
+#txtName {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.input[type="text"],
+#txtOutput,
+#txtOutputFrancais {
+  width: 0%;
+  padding: 0px 0px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  visibility: hidden;
+}

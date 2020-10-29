@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <title>Bonjour!</title>
+      <script type="text/javascript">
+         // start func
+         function convertNum() {
+             var txtName = document.getElementById("txtName");
+             var txtOutput = document.getElementById("txtOutput");
+             var txtOutputFrancais = document.getElementById("txtOutputFrancais");
+             var polHeading = document.getElementById("id01");
+             var fraHeading = document.getElementById("id02");
+             var name = txtName.value;
+             
+         
+             var d1 = name.substring(0, 1);
+             var d2 = name.substring(1, 2);
+             var d3 = name.substring(2, 3);
+             var d4 = name.substring(3, 4);
+         
+             var f1 = "";
+             var f2 = "";
+             var f3 = "";
+             var f4 = "";
+         
+             var c1 = "";
+             var c2 = "";
+             var c3 = "";
+             var c4 = "";
+         
+             //tysiaczne  
+             switch (d1) {
+                 case "1":
+                     f1 = "mille";
+                     c1 = "mil";
+                     break;
+                 case "2":
+                     f1 = "deux mille";
+                     c1 = "du mil";
+                     break;
+                 case "3":
+                     f1 = "trois mil";
+                     c1 = "trła mil";
+                     break;
+                 case "4":
+                     f1 = "quatre mille";
+                     c1 = "katr mil";
+                     break;
+                 case "5":
+                     f1 = "cinq mille";
+                     c1 = "sąk mil";
+                     break;
+                 case "6":
+                     f1 = "six mille";
+                     c1 = "si mil";
+                     break;
+                 case "7":
+                     f1 = "sept mille";
+                     c1 = "set mil";
+                     break;
+                 case "8":
+                     f1 = "huit mille";
+                     c1 = "łi mil";
+                     break;
+                 case "9":
+                     f1 = "neuf mille";
+                     c1 = "nyf mil";
+                     break;
+                 case "0":
+                     f1 = "";
+                     c1 = "";
+                     break;
+             }
+         
+             //setki  
+             switch (d2) {
+                 case "1":
+                     f2 = "cent";
+                     c2 = "są";
+                     break;
+                 case "2":
+                     f2 = "deux cent";
+                     c2 = "du są";
+                     break;
+                 case "3":
+                     f2 = "trois cent";
+                     c2 = "trła są";
+                     break;
+                 case "4":
+                     f2 = "quatre cent";
+                     c2 = "katr są";
+                     break;
+                 case "5":
+                     f2 = "cinq cent";
+                     c2 = "sąk są";
+                     break;
+                 case "6":
+                     f2 = "six cent";
+                     c2 = "sis są";
+                     break;
+                 case "7":
+                     f2 = "sept cent";
+                     c2 = "set są";
+                     break;
+                 case "8":
+                     f2 = "huit cent";
+                     c2 = "łit są";
+                     break;
+                 case "9":
+                     f2 = "neuf cent";
+                     c2 = "nyf są";
+                     break;
+                 case "0":
+                     f2 = "";
+                     c2 = "";
+                     break;
+             }
+         
+             //dziesiątki do 60  
+             switch (d3) {
+                 case "1":
+                     f3 = "dix";
+                     c3 = "dis";
+                     break;
+                 case "2":
+                     f3 = "vingt";
+                     c3 = "wą";
+                     break;
+                 case "3":
+                     f3 = "trente";
+                     c3 = "trąt";
+                     break;
+                 case "4":
+                     f3 = "quarante";
+                     c3 = "karąt";
+                     break;
+                 case "5":
+                     f3 = "cinquante";
+                     c3 = "sękąt";
+                     break;
+                 case "6":
+                     f3 = "soixante";
+                     c3 = "słasąt";
+                     break;
+                 case "8":
+                     f3 = "quatr-vingt";
+                     c3 = "katr wą";
+                     break;
+                 case "0":
+                     f3 = "";
+                     c3 = "";
+                     break;
+             }
+         
+             //dziesiatki powyzej 60 normalnie
+             switch (d4) {
+                 case "1":
+                     f4 = "et un";
+                     c4 = "e ą";
+                     break;
+                 case "2":
+                     f4 = "deux";
+                     c4 = "wą";
+                     break;
+                 case "3":
+                     f4 = "trois";
+                     c4 = "trąt";
+                     break;
+                 case "4":
+                     f4 = "quatr";
+                     c4 = "katr";
+                     break;
+                 case "5":
+                     f4 = "cinq";
+                     c4 = "sęk";
+                     break;
+                 case "6":
+                     f4 = "six";
+                     c4 = "sis";
+                     break;
+                 case "7":
+                     f4 = "sept";
+                     c4 = "set";
+                     break;
+                 case "8":
+                     f4 = "huit";
+                     c4 = "łit";
+                     break;
+                 case "9":
+                     f4 = "neuf";
+                     c4 = "nef";
+                     break;
+                 case "0":
+                     f4 = "";
+                     c4 = "";
+                     break;
+             }
+         
+             //dziesięćnaście
+             if (d3 == "1") {
+                 f3 = "";
+                 c3 = "";
+                 switch (d4) {
+                     case "1":
+                         f4 = "onze";
+                         c4 = "ąz";
+                         break;
+                     case "2":
+                         f4 = "douze";
+                         c4 = "duz";
+                         break;
+                     case "3":
+                         f4 = "treize";
+                         c4 = "trez";
+                         break;
+                     case "4":
+                         f4 = "quatorze";
+                         c4 = "katorz";
+                         break;
+                     case "5":
+                         f4 = "seize";
+                         c4 = "kęz";
+                         break;
+                     case "6":
+                         f4 = "seize";
+                         c4 = "sez";
+                         break;
+                     case "7":
+                         f4 = "dix-sept";
+                         c4 = "dis-set";
+                         break;
+                     case "8":
+                         f4 = "dix-huit";
+                         c4 = "dis-łit";
+                         break;
+                     case "9":
+                         f4 = "dix-neuf";
+                         c4 = "dis-nyf";
+                         break;
+                 }
+             }
+         
+             //70-80
+             if (d3 == "7") {
+                 f3 = "soixante";
+                 c3 = "słasą";
+                 switch (d4) {
+                     case "1":
+                         f4 = "onze";
+                         c4 = "ąz";
+                         break;
+                     case "2":
+                         f4 = "douze";
+                         c4 = "duz";
+                         break;
+                     case "3":
+                         f4 = "treize";
+                         c4 = "trez";
+                         break;
+                     case "4":
+                         f4 = "quatorze";
+                         c4 = "katorz";
+                         break;
+                     case "5":
+                         f4 = "seize";
+                         c4 = "kęz";
+                         break;
+                     case "6":
+                         f4 = "seize";
+                         c4 = "sez";
+                         break;
+                     case "7":
+                         f4 = "dix-sept";
+                         c4 = "dis-set";
+                         break;
+                     case "8":
+                         f4 = "dix-huit";
+                         c4 = "dis-łit";
+                         break;
+                     case "9":
+                         f4 = "dix-neuf";
+                         c4 = "dis-nyf";
+                         break;
+                     case "0":
+                         f4 = "dix";
+                         c4 = "dis";
+                         break;
+                 }
+             }
+         
+             //80-90
+             if (d3 == "9") {
+                 f3 = "quatre-vingt";
+                 c3 = "katr wą";
+                 switch (d4) {
+                     case "1":
+                         f4 = "onze";
+                         c4 = "ąz";
+                         break;
+                     case "2":
+                         f4 = "douze";
+                         c4 = "duz";
+                         break;
+                     case "3":
+                         f4 = "treize";
+                         c4 = "trez";
+                         break;
+                     case "4":
+                         f4 = "quatorze";
+                         c4 = "katorz";
+                         break;
+                     case "5":
+                         f4 = "seize";
+                         c4 = "kęz";
+                         break;
+                     case "6":
+                         f4 = "seize";
+                         c4 = "sez";
+                         break;
+                     case "7":
+                         f4 = "dix-sept";
+                         c4 = "dis-set";
+                         break;
+                     case "8":
+                         f4 = "dix-huit";
+                         c4 = "dis-łit";
+                         break;
+                     case "9":
+                         f4 = "dix-neuf";
+                         c4 = "dis-nyf";
+                         break;
+                     case "0":
+                         f4 = "dix";
+                         c4 = "dis";
+                         break;
+                 }
+             }
+         
+         
+         
+         
+             var inputPol = c1 + " " + c2 + " " + c3 + " " + c4;
+             var inputFra = f1 + " " + f2 + " " + f3 + " " + f4;
+             var resultingPol = inputPol.replace(/ +(?= )/g, '');
+             var resultingFra = inputFra.replace(/ +(?= )/g, '');
+             txtOutput.value = resultingPol;
+             txtOutputFrancais.value = resultingFra;
+             polHeading.textContent = resultingPol;
+             fraHeading.textContent = resultingFra;
+         
+         
+         
+         
+         } // end function
+         
+         //continous
+         window.setInterval(convertNum,10);
+         
+      </script>
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+   </head>
+   <div class="center">
+      <input type="text" id="txtOutput" />
+      <input type="text" id="txtOutputFrancais" />
+      <body>
+         <h1>
+            <center>🥖🍷🥐</center>
+         </h1>
+         <center>
+            <h2 id=txtP>Bonjour studencie UEP! Wpisz liczbę w formacie 0000-9999.</h2>
+         </center>
+         <form action=>
+            <input type="text" id="txtName" maxlength="4"/>
+         </form>
+      </body>
+   </div>
+   <div class="bigger">
+      <center>
+         <h2 id="id01"></h2>
+         <h2 id="id02"></h2>
+      </center>
+   </div>
+</html>
